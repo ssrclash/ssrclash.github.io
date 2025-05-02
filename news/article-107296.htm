@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://ssrclash.github.io/news/article-107296.htm" />
+    <meta charset="utf-8">
+    <title>全面掌握Clash端口设置：配置、查找与优化的深度指南</title>
+        <meta name="description" content="在科学上网的实践中，Clash因其强大、灵活和开放的特性，已成为众多用户首选的代理工具。无论是开发者、跨境从业者，还是普通用户，只要接触过代理配置，几乎都绕不开Clash的身影。而要高效地运用Clas" />
+        <link rel="icon" href="/assets/website/img/winxraygithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="SSR Clash订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ssrclash.github.io/news/article-107296.htm" />
+    <meta property="og:site_name" content="SSR Clash订阅中文网" />
+    <meta property="og:title" content="全面掌握Clash端口设置：配置、查找与优化的深度指南" />
+    <meta property="og:image" content="https://ssrclash.github.io/uploads/20240803/fb4a4bb58a8030ca57602c81938d1b4a.webp" />
+        <meta property="og:release_date" content="2025-04-29T08:03:22" />
+    <meta property="og:updated_time" content="2025-04-29T08:03:22" />
+        <meta property="og:description" content="在科学上网的实践中，Clash因其强大、灵活和开放的特性，已成为众多用户首选的代理工具。无论是开发者、跨境从业者，还是普通用户，只要接触过代理配置，几乎都绕不开Clash的身影。而要高效地运用Clas" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="全面掌握Clash端口设置：配置、查找与优化的深度指南">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/fonts/winxraygithub/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/assets/website/fonts/winxraygithub/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/aos.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CE24DXP66L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CE24DXP66L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="site-wrap" id="home-section">
+                <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6 col-md-3 col-xl-4  d-block">
+                        <a href="/" class="text-black h2 mb-0">
+                                                SSR Clash                        </a>
+                    </div>
+                    <div class="col-12 col-md-9 col-xl-8 main-menu">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block ml-0 pl-0">
+                                                                <li><a href="/" class="nav-link">首页</a></li>
+                                                                <li><a href="/paid-subscribe/" class="nav-link">推荐机场</a></li>
+                                                                <li><a href="/news/" class="nav-link">新闻资讯</a></li>
+                                                                <li><a href="/client.htm" class="nav-link">客户端</a></li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 col-md-9 d-inline-block d-lg-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="site-blocks-cover list" style="overflow: hidden;">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+                        <img src="/assets/website/img/winxraygithub/undraw_investing_7u74.svg" alt="Image" class="img-fluid img-absolute">
+                        <div class="row" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-lg-6 mr-auto">
+                                <h1>全面掌握Clash端口设置：配置、查找与优化的深度指南</h1>
+                                <p class="mb-5">
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-big my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                    
+<p data-start="31" data-end="152" class="">在科学上网的实践中，Clash因其强大、灵活和开放的特性，已成为众多用户首选的代理工具。无论是开发者、跨境从业者，还是普通用户，只要接触过代理配置，几乎都绕不开Clash的身影。而要高效地运用Clash，端口设置的认知无疑是其中的“必修课”。</p>
+<p data-start="154" data-end="256" class="">本篇文章将带你深入探讨Clash端口的来龙去脉——从默认端口的识别，到自定义端口的修改与优化，全流程覆盖。无论你是刚接触Clash的小白，还是正在搭建专业代理环境的进阶玩家，都能从中找到实用的技巧和方法。</p>
+<hr data-start="258" data-end="261" class="" style="">
+<h2 data-start="263" data-end="288" class="">一、为什么了解Clash的端口设置至关重要？</h2>
+<p data-start="290" data-end="388" class="">Clash运行时，会监听多个端口来完成代理任务，例如处理HTTP请求、Socks5代理、配置更新、本地面板访问等。这些端口不仅是系统通信的“通道”，也是你配置浏览器、系统代理、设备代理的关键节点。</p>
+<p data-start="390" data-end="417" class="">如果你不知道这些端口的位置或功能，就可能出现以下问题：</p>
+<ul data-start="419" data-end="577">
+<li data-start="419" data-end="452" class="" style="">
+<p data-start="421" data-end="452" class=""><strong data-start="421" data-end="429">代理失效</strong>：浏览器或系统找不到正确的端口，流量无法转发；</p>
+</li>
+<li data-start="453" data-end="504" class="" style="">
+<p data-start="455" data-end="504" class=""><strong data-start="455" data-end="463">端口冲突</strong>：其他程序（如Docker、Web服务）使用了同一个端口，导致Clash无法启动；</p>
+</li>
+<li data-start="505" data-end="536" class="" style="">
+<p data-start="507" data-end="536" class=""><strong data-start="507" data-end="515">安全隐患</strong>：未设防的端口暴露在公网，可能被恶意利用；</p>
+</li>
+<li data-start="537" data-end="577" class="" style="">
+<p data-start="539" data-end="577" class=""><strong data-start="539" data-end="549">设备连接问题</strong>：局域网其他设备无法通过你配置的Clash节点共享网络。</p>
+</li>
+</ul>
+<p data-start="579" data-end="617" class="">因此，掌握Clash端口的查找和配置方法，是一项基础却又不可忽视的操作技能。</p>
+<hr data-start="619" data-end="622" class="" style="">
+<h2 data-start="624" data-end="645" class="">二、Clash工作原理与端口角色解析</h2>
+<p data-start="647" data-end="671" class="">在默认配置下，Clash一般会启用以下几类端口：</p>
+<ul data-start="673" data-end="866">
+<li data-start="673" data-end="700" class="" style="">
+<p data-start="675" data-end="700" class=""><code data-start="675" data-end="681">port</code>：主HTTP代理端口（通常为7890）</p>
+</li>
+<li data-start="701" data-end="734" class="" style="">
+<p data-start="703" data-end="734" class=""><code data-start="703" data-end="715">socks-port</code>：Socks5代理端口（默认7891）</p>
+</li>
+<li data-start="735" data-end="767" class="" style="">
+<p data-start="737" data-end="767" class=""><code data-start="737" data-end="749">redir-port</code>：透明代理端口（仅在某些系统下使用）</p>
+</li>
+<li data-start="768" data-end="813" class="" style="">
+<p data-start="770" data-end="813" class=""><code data-start="770" data-end="791">external-controller</code>：Clash控制面板访问端口（默认9090）</p>
+</li>
+<li data-start="814" data-end="866" class="" style="">
+<p data-start="816" data-end="866" class=""><code data-start="816" data-end="828">mixed-port</code>：混合端口，同时支持HTTP和Socks协议（通常为7890，取代单独端口）</p>
+</li>
+</ul>
+<p data-start="868" data-end="956" class="">这些端口均由配置文件 <code data-start="879" data-end="892">config.yaml</code> 控制，不同客户端版本（如Clash for Windows、Meta、Clash Verge等）可能略有差异，但总体结构一致。</p>
+<hr data-start="958" data-end="961" class="" style="">
+<h2 data-start="963" data-end="982" class="">三、查找Clash端口的几种方法</h2>
+<h3 data-start="984" data-end="1002" class="">1. 查看配置文件（最权威）</h3>
+<p data-start="1004" data-end="1066" class="">Clash的所有端口定义，最终都记录在其配置文件中。默认文件名为 <code data-start="1037" data-end="1050">config.yaml</code> 或 <code data-start="1053" data-end="1065">config.yml</code>。</p>
+<h4 data-start="1068" data-end="1078" class="">操作步骤：</h4>
+<ol data-start="1080" data-end="1340">
+<li data-start="1080" data-end="1272" class="" style="">
+<p data-start="1083" data-end="1096" class=""><strong data-start="1083" data-end="1095">找到配置文件目录</strong>：</p>
+<ul data-start="1100" data-end="1272">
+<li data-start="1100" data-end="1159" class="" style="">
+<p data-start="1102" data-end="1159" class="">Windows 用户：一般位于 <code data-start="1118" data-end="1149">C:\Users\你的用户名\.config\clash\</code> 或软件安装目录下。</p>
+</li>
+<li data-start="1163" data-end="1219" class="" style="">
+<p data-start="1165" data-end="1219" class="">macOS / Linux 用户：位于 <code data-start="1185" data-end="1203">~/.config/clash/</code> 或 <code data-start="1206" data-end="1219">/etc/clash/</code></p>
+</li>
+<li data-start="1223" data-end="1272" class="" style="">
+<p data-start="1225" data-end="1272" class="">Clash for Windows 用户：可以在图形界面的“Profiles”面板中打开目录。</p>
+</li>
+</ul>
+</li>
+<li data-start="1274" data-end="1324" class="" style="">
+<p data-start="1277" data-end="1324" class=""><strong data-start="1277" data-end="1296">打开config.yaml文件</strong>（推荐用 Notepad++、VS Code 等编辑器）</p>
+</li>
+<li data-start="1326" data-end="1340" class="" style="">
+<p data-start="1329" data-end="1340" class=""><strong data-start="1329" data-end="1339">查找端口字段</strong>：</p>
+</li>
+</ol>
+<pre class="overflow-visible!" data-start="1342" data-end="1451"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">yaml</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-yaml"><span><span><span class="hljs-attr">port:</span></span><span> </span><span><span class="hljs-number">7890</span></span><span>
+</span><span><span class="hljs-attr">socks-port:</span></span><span> </span><span><span class="hljs-number">7891</span></span><span>
+</span><span><span class="hljs-attr">redir-port:</span></span><span> </span><span><span class="hljs-number">7892</span></span><span>
+</span><span><span class="hljs-attr">mixed-port:</span></span><span> </span><span><span class="hljs-number">7893</span></span><span>
+</span><span><span class="hljs-attr">external-controller:</span></span><span> </span><span><span class="hljs-number">127.0</span></span><span><span class="hljs-number">.0</span></span><span><span class="hljs-number">.1</span></span><span><span class="hljs-string">:9090</span></span><span>
+</span></span></code></div></div></pre>
+<p data-start="1453" data-end="1478" class="">这些条目就是你当前Clash运行所依赖的端口参数。</p>
+<blockquote data-start="1480" data-end="1539">
+<p data-start="1482" data-end="1539" class="">⚠️ 注意：某些版本（如Clash.Meta）可能使用<code data-start="1509" data-end="1521">mixed-port</code>取代单独的HTTP和Socks端口。</p>
+</blockquote>
+<hr data-start="1541" data-end="1544" class="" style="">
+<h3 data-start="1546" data-end="1588" class="">2. 图形界面中查看（适用于Clash for Windows、Meta等）</h3>
+<p data-start="1590" data-end="1620" class="">如果你使用的是带GUI的Clash客户端，查看端口更加直观。</p>
+<h4 data-start="1622" data-end="1632" class="">操作路径：</h4>
+<ul data-start="1634" data-end="1703">
+<li data-start="1634" data-end="1646" class="" style="">
+<p data-start="1636" data-end="1646" class="">启动Clash客户端</p>
+</li>
+<li data-start="1647" data-end="1671" class="" style="">
+<p data-start="1649" data-end="1671" class="">点击左侧菜单栏的【设置】或【General】</p>
+</li>
+<li data-start="1672" data-end="1703" class="" style="">
+<p data-start="1674" data-end="1703" class="">查找【HTTP端口】【Socks端口】【控制面板端口】字段</p>
+</li>
+</ul>
+<p data-start="1705" data-end="1745" class="">在这些字段中，软件会清楚地标明每种类型的端口号，并且大部分支持<strong data-start="1736" data-end="1744">一键修改</strong>。</p>
+<hr data-start="1747" data-end="1750" class="" style="">
+<h3 data-start="1752" data-end="1773" class="">3. 控制台输出查看（命令行用户）</h3>
+<p data-start="1775" data-end="1813" class="">如果你使用的是纯命令行版本的Clash，启动时它会在控制台输出全部端口信息：</p>
+<pre class="overflow-visible!" data-start="1815" data-end="1982"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>INFO[0000] HTTP proxy listening at: 127.0.0.1:7890
+INFO[0000] SOCKS5 proxy listening at: 127.0.0.1:7891
+INFO[0000] RESTful API listening at: 127.0.0.1:9090
+</span></span></code></div></div></pre>
+<p data-start="1984" data-end="2021" class="">启动后几秒内便能看到，适用于Linux服务器部署、Docker容器等环境。</p>
+<hr data-start="2023" data-end="2026" class="" style="">
+<h2 data-start="2028" data-end="2046" class="">四、如何修改Clash的端口？</h2>
+<p data-start="2048" data-end="2066" class="">修改端口的需求通常来自以下几种场景：</p>
+<ul data-start="2068" data-end="2133">
+<li data-start="2068" data-end="2094" class="" style="">
+<p data-start="2070" data-end="2094" class="">避免与其他程序冲突（如浏览器插件、VPN客户端）</p>
+</li>
+<li data-start="2095" data-end="2109" class="" style="">
+<p data-start="2097" data-end="2109" class="">多Clash实例并行运行</p>
+</li>
+<li data-start="2110" data-end="2133" class="" style="">
+<p data-start="2112" data-end="2133" class="">设置公网端口转发、配合Nginx等反向代理</p>
+</li>
+</ul>
+<h3 data-start="2135" data-end="2146" class="">操作步骤如下：</h3>
+<ol data-start="2148" data-end="2186">
+<li data-start="2148" data-end="2170" class="" style="">
+<p data-start="2151" data-end="2170" class="">打开 <code data-start="2154" data-end="2167">config.yaml</code> 文件</p>
+</li>
+<li data-start="2171" data-end="2186" class="" style="">
+<p data-start="2174" data-end="2186" class="">找到对应端口字段，例如：</p>
+</li>
+</ol>
+<pre class="overflow-visible!" data-start="2188" data-end="2227"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">yaml</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-yaml"><span><span><span class="hljs-attr">port:</span></span><span> </span><span><span class="hljs-number">7890</span></span><span>
+</span><span><span class="hljs-attr">socks-port:</span></span><span> </span><span><span class="hljs-number">7891</span></span><span>
+</span></span></code></div></div></pre>
+<ol start="3" data-start="2229" data-end="2249">
+<li data-start="2229" data-end="2249" class="" style="">
+<p data-start="2232" data-end="2249" class="">将其修改为其他未被占用的端口，如：</p>
+</li>
+</ol>
+<pre class="overflow-visible!" data-start="2251" data-end="2290"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">yaml</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-yaml"><span><span><span class="hljs-attr">port:</span></span><span> </span><span><span class="hljs-number">8888</span></span><span>
+</span><span><span class="hljs-attr">socks-port:</span></span><span> </span><span><span class="hljs-number">8889</span></span><span>
+</span></span></code></div></div></pre>
+<ol start="4" data-start="2292" data-end="2309">
+<li data-start="2292" data-end="2309" class="" style="">
+<p data-start="2295" data-end="2309" class="">保存文件，重新启动Clash</p>
+</li>
+</ol>
+<blockquote data-start="2311" data-end="2385">
+<p data-start="2313" data-end="2322" class="">✅ <strong data-start="2315" data-end="2322">建议：</strong></p>
+<ul data-start="2325" data-end="2385">
+<li data-start="2325" data-end="2345" class="" style="">
+<p data-start="2327" data-end="2345" class="">避免使用系统保留端口（0–1023）</p>
+</li>
+<li data-start="2348" data-end="2385" class="" style="">
+<p data-start="2350" data-end="2385" class="">使用 <code data-start="2353" data-end="2362">netstat</code> 或 <code data-start="2365" data-end="2374">lsof -i</code> 命令检查端口占用情况</p>
+</li>
+</ul>
+</blockquote>
+<hr data-start="2387" data-end="2390" class="" style="">
+<h2 data-start="2392" data-end="2408" class="">五、端口冲突检测与优化建议</h2>
+<h3 data-start="2410" data-end="2426" class="">如何检查端口是否被占用？</h3>
+<h4 data-start="2428" data-end="2443" class="">Windows系统：</h4>
+<pre class="overflow-visible!" data-start="2445" data-end="2484"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">cmd</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-cmd"><span>netstat -ano | findstr :7890
+</span></code></div></div></pre>
+<p data-start="2486" data-end="2505" class="">查看哪个进程（PID）占用了这个端口。</p>
+<h4 data-start="2507" data-end="2526" class="">macOS / Linux：</h4>
+<pre class="overflow-visible!" data-start="2528" data-end="2553"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>lsof -i :7890
+</span></span></code></div></div></pre>
+<p data-start="2555" data-end="2572" class="">输出占用该端口的进程名称和PID。</p>
+<h3 data-start="2574" data-end="2587" class="">如果冲突了怎么办？</h3>
+<ul data-start="2589" data-end="2649">
+<li data-start="2589" data-end="2612" class="" style="">
+<p data-start="2591" data-end="2612" class="">更改Clash配置文件中的端口，避开占用项</p>
+</li>
+<li data-start="2613" data-end="2628" class="" style="">
+<p data-start="2615" data-end="2628" class="">停止或禁用占用该端口的程序</p>
+</li>
+<li data-start="2629" data-end="2649" class="" style="">
+<p data-start="2631" data-end="2649" class="">使用防火墙屏蔽外部访问，防止安全漏洞</p>
+</li>
+</ul>
+<hr data-start="2651" data-end="2654" class="" style="">
+<h2 data-start="2656" data-end="2672" class="">六、如何验证端口是否生效？</h2>
+<p data-start="2674" data-end="2705" class="">修改完端口后，务必验证Clash是否成功运行并监听了对应端口。</p>
+<h3 data-start="2707" data-end="2716" class="">验证方法：</h3>
+<ul data-start="2718" data-end="2781">
+<li data-start="2718" data-end="2765" class="" style="">
+<p data-start="2720" data-end="2765" class="">在浏览器中输入：<code data-start="2728" data-end="2751">http://127.0.0.1:8888</code> （替换为你的HTTP端口）</p>
+</li>
+<li data-start="2766" data-end="2781" class="" style="">
+<p data-start="2768" data-end="2781" class="">使用 curl 工具测试：</p>
+</li>
+</ul>
+<pre class="overflow-visible!" data-start="2783" data-end="2847"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>curl -x http://127.0.0.1:8888 https://www.google.com
+</span></span></code></div></div></pre>
+<p data-start="2849" data-end="2873" class="">如果返回网页内容或响应码200，即表示配置成功。</p>
+<hr data-start="2875" data-end="2878" class="" style="">
+<h2 data-start="2880" data-end="2896" class="">七、常见问题解答（FAQ）</h2>
+<h3 data-start="2898" data-end="2918" class="">Q1：Clash默认端口是多少？</h3>
+<p data-start="2920" data-end="2976" class="">A1：HTTP端口为7890，Socks端口为7891，控制面板端口为9090。这些都可在配置文件中查看和修改。</p>
+<h3 data-start="2978" data-end="3002" class="">Q2：我能同时开启多个Clash实例吗？</h3>
+<p data-start="3004" data-end="3032" class="">A2：可以，但需确保每个实例使用不同的端口，否则会冲突。</p>
+<h3 data-start="3034" data-end="3059" class="">Q3：端口修改后，浏览器插件为何无法代理？</h3>
+<p data-start="3061" data-end="3106" class="">A3：插件通常默认连接7890端口，请进入插件设置，修改代理端口以匹配Clash当前设置。</p>
+<h3 data-start="3108" data-end="3135" class="">Q4：如何让局域网设备使用我电脑的Clash？</h3>
+<p data-start="3137" data-end="3204" class="">A4：需将<code data-start="3142" data-end="3153">allow-lan</code>字段设为<code data-start="3157" data-end="3163">true</code>，并开放监听地址为 <code data-start="3173" data-end="3182">0.0.0.0</code> 或本地网段地址。还需配置防火墙或端口转发。</p>
+<hr data-start="3206" data-end="3209" class="" style="">
+<h2 data-start="3211" data-end="3231" class="">八、结语：掌握端口，驾驭Clash</h2>
+<p data-start="3233" data-end="3336" class="">Clash的强大不仅体现在协议支持、配置灵活上，更在于它为用户提供了极大的可控性。而端口作为Clash与外界沟通的“语言”，如果你掌握了它的配置、查找与优化方法，那么你就真正拥有了驾驭Clash的核心能力。</p>
+<p data-start="3338" data-end="3387" class="">从默认配置的理解，到手动修改的实战，再到冲突排查和网络验证，这篇文章为你构建了一个完整的知识闭环。</p>
+<hr data-start="3389" data-end="3392" class="" style="">
+<h2 data-start="3394" data-end="3419" class="">点评：结构清晰，内容扎实，进阶之路的通关秘笈</h2>
+<p data-start="3421" data-end="3600" class="">这篇文章并非简单的配置手册，而是一次Clash使用逻辑的全面讲解。作者以“端口”为主线，层层递进，从理论概念、操作实践到故障处理，形成闭环教学。这种由浅入深的讲述方式既兼顾小白上手，又给予进阶玩家足够空间去“深挖”优化。而语言风格则在理性与温度之间找到了平衡点，阅读体验轻松不失权威。可以说，这是一篇真正帮助用户理解并运用Clash端口的专业级“图文全解”。</p>                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-106134.htm">全面了解Surfboard更新：内容、步骤与常见问题解答</a></p>
+                                        <p>下一个：<a href="/news/article-107297.htm">全面解析V2RayNG：安装、配置与使用技巧全攻略</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-103128.htm" title="旅行路由器与科学上网的完美结合：出行中的网络利器">旅行路由器与科学上网的完美结合：出行中的网络利器</a></li>
+                        <li class="py-2"><a href="/news/article-104705.htm" title="如何在《Clash》中高效查看援军到达状态：全面解析与实用技巧">如何在《Clash》中高效查看援军到达状态：全面解析与实用技巧</a></li>
+                        <li class="py-2"><a href="/news/article-101895.htm" title="新南威尔士大学阶级冲突现象探讨：挑战与应对之道">新南威尔士大学阶级冲突现象探讨：挑战与应对之道</a></li>
+                        <li class="py-2"><a href="/news/article-103126.htm" title="深入探索 Clash 机场灵魂云的功能与配置指南">深入探索 Clash 机场灵魂云的功能与配置指南</a></li>
+                        <li class="py-2"><a href="/news/article-108854.htm" title="破解困境：V2Ray在中国移动宽带下连接不稳定问题全解析与应对策略">破解困境：V2Ray在中国移动宽带下连接不稳定问题全解析与应对策略</a></li>
+                        <li class="py-2"><a href="/news/article-103830.htm" title="稳定科学上网：突破屏障，畅享自由互联网">稳定科学上网：突破屏障，畅享自由互联网</a></li>
+                        <li class="py-2"><a href="/news/article-107297.htm" title="全面解析V2RayNG：安装、配置与使用技巧全攻略">全面解析V2RayNG：安装、配置与使用技巧全攻略</a></li>
+                        <li class="py-2"><a href="/news/article-105311.htm" title="完整指南：V2Ray域名更换步骤及常见问题解答">完整指南：V2Ray域名更换步骤及常见问题解答</a></li>
+                        <li class="py-2"><a href="/news/article-106133.htm" title="解锁网络自由的钥匙：全面解析V2Ray手机应用的安装、配置与使用技巧">解锁网络自由的钥匙：全面解析V2Ray手机应用的安装、配置与使用技巧</a></li>
+                        <li class="py-2"><a href="/news/article-109691.htm" title="圈X 添加 V2Ray 全流程详解：从节点配置到连接检测的终极教程">圈X 添加 V2Ray 全流程详解：从节点配置到连接检测的终极教程</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="footer py-5 text-center">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <p class="mb-0">
+                            <a href="#" class="p-3"><span class="icon-facebook"></span></a>
+                            <a href="#" class="p-3"><span class="icon-twitter"></span></a>
+                            <a href="#" class="p-3"><span class="icon-instagram"></span></a>
+                            <a href="#" class="p-3"><span class="icon-linkedin"></span></a>
+                            <a href="#" class="p-3"><span class="icon-pinterest"></span></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <p class="mb-0">
+                        SSR Clash订阅中文网 版权所有 Powered by WordPress
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery-3.3.1.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.countdown.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/bootstrap-datepicker.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.easing.1.3.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/aos.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.fancybox.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.sticky.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div> <!-- .site-wrap -->
+</body>
+
+</html>

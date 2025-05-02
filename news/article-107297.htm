@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://ssrclash.github.io/news/article-107297.htm" />
+    <meta charset="utf-8">
+    <title>全面解析V2RayNG：安装、配置与使用技巧全攻略</title>
+        <meta name="description" content="在现代互联网的使用中，网络安全和隐私保护已成为每个用户日益关注的重要问题。尤其是在某些地区，网络审查和限制层出不穷，极大地限制了信息的自由流动。在这种背景下，V2RayNG作为一款基于V2Ray核心的" />
+        <link rel="icon" href="/assets/website/img/winxraygithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="SSR Clash订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ssrclash.github.io/news/article-107297.htm" />
+    <meta property="og:site_name" content="SSR Clash订阅中文网" />
+    <meta property="og:title" content="全面解析V2RayNG：安装、配置与使用技巧全攻略" />
+    <meta property="og:image" content="https://ssrclash.github.io/uploads/20240803/202b4689107127ecfe984bb6eebbdd76.webp" />
+        <meta property="og:release_date" content="2025-04-29T08:03:22" />
+    <meta property="og:updated_time" content="2025-04-29T08:03:22" />
+        <meta property="og:description" content="在现代互联网的使用中，网络安全和隐私保护已成为每个用户日益关注的重要问题。尤其是在某些地区，网络审查和限制层出不穷，极大地限制了信息的自由流动。在这种背景下，V2RayNG作为一款基于V2Ray核心的" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="全面解析V2RayNG：安装、配置与使用技巧全攻略">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/fonts/winxraygithub/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/assets/website/fonts/winxraygithub/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/aos.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CE24DXP66L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CE24DXP66L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="site-wrap" id="home-section">
+                <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6 col-md-3 col-xl-4  d-block">
+                        <a href="/" class="text-black h2 mb-0">
+                                                SSR Clash                        </a>
+                    </div>
+                    <div class="col-12 col-md-9 col-xl-8 main-menu">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block ml-0 pl-0">
+                                                                <li><a href="/" class="nav-link">首页</a></li>
+                                                                <li><a href="/paid-subscribe/" class="nav-link">推荐机场</a></li>
+                                                                <li><a href="/news/" class="nav-link">新闻资讯</a></li>
+                                                                <li><a href="/client.htm" class="nav-link">客户端</a></li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 col-md-9 d-inline-block d-lg-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="site-blocks-cover list" style="overflow: hidden;">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+                        <img src="/assets/website/img/winxraygithub/undraw_investing_7u74.svg" alt="Image" class="img-fluid img-absolute">
+                        <div class="row" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-lg-6 mr-auto">
+                                <h1>全面解析V2RayNG：安装、配置与使用技巧全攻略</h1>
+                                <p class="mb-5">
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-big my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                    
+<p data-start="29" data-end="233" class="">在现代互联网的使用中，网络安全和隐私保护已成为每个用户日益关注的重要问题。尤其是在某些地区，网络审查和限制层出不穷，极大地限制了信息的自由流动。在这种背景下，V2RayNG作为一款基于V2Ray核心的Android应用程序，凭借其强大的功能和灵活的配置，成为了许多用户突破网络限制、保护个人隐私的得力助手。本文将为您全面解析V2RayNG的安装、配置、使用技巧，以及常见问题的解决方法，帮助您充分发挥其功能。</p>
+<h2 data-start="235" data-end="249" class="">什么是V2RayNG？</h2>
+<p data-start="251" data-end="412" class="">V2RayNG是一款Android平台上的网络代理工具，基于V2Ray的开源核心，旨在为用户提供稳定、安全且高效的网络连接。与传统的VPN相比，V2RayNG具有更强的协议支持、传输方式优化以及更加灵活的配置选项，能够有效突破大部分网络封锁和审查，保护用户的上网隐私。它广泛应用于科学上网、匿名浏览、访问被屏蔽网站等场景。</p>
+<h3 data-start="414" data-end="430" class="">V2RayNG的核心特点</h3>
+<ol data-start="432" data-end="684">
+<li data-start="432" data-end="506" class="">
+<p data-start="435" data-end="506" class=""><strong data-start="435" data-end="444">多协议支持</strong>：V2RayNG支持包括VMess、Shadowsocks、Trojan等多种协议，用户可以根据自己的需求选择最适合的协议。</p>
+</li>
+<li data-start="507" data-end="562" class="">
+<p data-start="510" data-end="562" class=""><strong data-start="510" data-end="521">灵活的配置选项</strong>：用户可以根据需求自定义服务器地址、端口、加密方式、传输协议等，适配各种网络环境。</p>
+</li>
+<li data-start="563" data-end="626" class="">
+<p data-start="566" data-end="626" class=""><strong data-start="566" data-end="578">高性能的网络连接</strong>：通过优化的多协议支持，V2RayNG能够提供更为稳定、快速的网络连接，减少延迟，避免网络拥塞。</p>
+</li>
+<li data-start="627" data-end="684" class="">
+<p data-start="630" data-end="684" class=""><strong data-start="630" data-end="641">简洁易用的界面</strong>：V2RayNG拥有直观的用户界面，即便是没有技术背景的用户也能够轻松操作，迅速上手。</p>
+</li>
+</ol>
+<h2 data-start="686" data-end="701" class="">V2RayNG的安装步骤</h2>
+<h3 data-start="703" data-end="719" class="">1. 下载V2RayNG</h3>
+<p data-start="721" data-end="777" class="">首先，您需要从可靠的来源下载V2RayNG。最常见的方式是通过V2RayNG的官方网站或应用商店下载APK文件。</p>
+<ul data-start="779" data-end="882">
+<li data-start="779" data-end="823" class="">
+<p data-start="781" data-end="823" class=""><strong data-start="781" data-end="789">官网下载</strong>：您可以访问V2RayNG的官方网站，下载最新版本的V2RayNG。</p>
+</li>
+<li data-start="824" data-end="882" class="">
+<p data-start="826" data-end="882" class=""><strong data-start="826" data-end="836">应用商店下载</strong>：V2RayNG也可以通过一些第三方应用市场进行下载，确保来源的可靠性以避免恶意软件的风险。</p>
+</li>
+</ul>
+<h3 data-start="884" data-end="900" class="">2. 安装V2RayNG</h3>
+<p data-start="902" data-end="950" class="">下载完成后，点击APK文件进行安装。安装过程非常简单，您只需点击“安装”按钮，等待安装程序完成。</p>
+<p data-start="952" data-end="1009" class="">如果您的设备未允许安装来自未知来源的应用，您需要在设备设置中启用“允许安装未知来源应用”的选项，然后再次尝试安装。</p>
+<h3 data-start="1011" data-end="1027" class="">3. 启动V2RayNG</h3>
+<p data-start="1029" data-end="1112" class="">安装完成后，您可以直接打开V2RayNG应用。在主界面，您将看到多个选项，用于配置服务器、设置代理以及管理流量等。接下来，您可以开始配置V2RayNG以实现网络代理。</p>
+<h2 data-start="1114" data-end="1129" class="">V2RayNG的配置教程</h2>
+<h3 data-start="1131" data-end="1145" class="">1. 添加服务器配置</h3>
+<p data-start="1147" data-end="1201" class="">在V2RayNG的主界面，点击左上角的“添加”按钮，进入配置界面。此时，您可以选择以下几种方式来配置服务器：</p>
+<ul data-start="1203" data-end="1328">
+<li data-start="1203" data-end="1259" class="">
+<p data-start="1205" data-end="1259" class=""><strong data-start="1205" data-end="1213">手动输入</strong>：手动填写服务器的地址、端口、用户ID（UUID）等信息。确保这些信息来自可靠的服务提供商。</p>
+</li>
+<li data-start="1260" data-end="1328" class="">
+<p data-start="1262" data-end="1328" class=""><strong data-start="1262" data-end="1272">导入配置文件</strong>：如果您已有配置文件，可以选择从本地文件或通过扫描二维码导入配置。这样可以省去手动输入的麻烦，确保配置准确无误。</p>
+</li>
+</ul>
+<h3 data-start="1330" data-end="1346" class="">2. 配置传输协议与方式</h3>
+<p data-start="1348" data-end="1407" class="">在V2RayNG中，您可以选择不同的传输协议与方式，以适应不同的网络环境和安全需求。V2RayNG支持的主要协议包括：</p>
+<ul data-start="1409" data-end="1536">
+<li data-start="1409" data-end="1451" class="">
+<p data-start="1411" data-end="1451" class=""><strong data-start="1411" data-end="1420">VMess</strong>：V2Ray的默认协议，支持加密和混淆，能够有效防止流量分析。</p>
+</li>
+<li data-start="1452" data-end="1492" class="">
+<p data-start="1454" data-end="1492" class=""><strong data-start="1454" data-end="1469">Shadowsocks</strong>：一种轻量级的代理协议，广泛用于突破网络限制。</p>
+</li>
+<li data-start="1493" data-end="1533" class="">
+<p data-start="1495" data-end="1533" class=""><strong data-start="1495" data-end="1505">Trojan</strong>：一种兼容HTTPS协议的代理协议，能够绕过防火墙检测。</p>
+</li>
+</ul>
+<p data-start="1537" data-end="1627" class="">在配置时，您可以根据需求选择不同的传输方式，例如：<strong data-start="1562" data-end="1584">TCP、WebSocket、mKCP</strong>等。这些选项允许用户根据自己的网络环境，选择最合适的传输方式，从而获得更好的性能表现。</p>
+<h3 data-start="1629" data-end="1640" class="">3. 保存配置</h3>
+<p data-start="1642" data-end="1732" class="">配置完成后，点击“保存”按钮，返回主界面。此时，您已经成功添加了一个可用的服务器配置。为了确保连接的安全性，建议您定期更新服务器的配置和V2RayNG客户端，以获得最佳的上网体验。</p>
+<h3 data-start="1734" data-end="1746" class="">4. 连接服务器</h3>
+<p data-start="1748" data-end="1827" class="">在主界面，选择刚刚配置的服务器，点击“连接”按钮。V2RayNG会开始连接到目标服务器，并建立一个加密隧道。连接成功后，您就可以享受更加安全、自由的网络体验。</p>
+<h2 data-start="1829" data-end="1844" class="">V2RayNG的使用技巧</h2>
+<h3 data-start="1846" data-end="1857" class="">1. 定期更新</h3>
+<p data-start="1859" data-end="1951" class="">保持V2RayNG及其配置文件的更新非常重要。网络环境可能发生变化，服务器配置也可能需要调整。定期更新可以确保您的V2RayNG客户端与最新的网络环境兼容，从而避免连接中断或速度下降。</p>
+<h3 data-start="1953" data-end="1967" class="">2. 使用自定义规则</h3>
+<p data-start="1969" data-end="2071" class="">V2RayNG提供了强大的分流功能，允许用户根据需要设置自定义规则。您可以通过自定义规则来优化流量分配，避免不必要的网络拥堵。比如，您可以为不同的应用设置不同的代理规则，或指定特定网站通过代理服务器访问。</p>
+<h3 data-start="2073" data-end="2084" class="">3. 监控流量</h3>
+<p data-start="2086" data-end="2162" class="">V2RayNG允许用户查看流量使用情况。定期检查流量使用情况，可以帮助用户合理分配带宽，避免超出流量限制。同时，合理管理流量也能有效延长设备的使用寿命。</p>
+<h2 data-start="2164" data-end="2178" class="">常见问题解答（FAQ）</h2>
+<h3 data-start="2180" data-end="2198" class="">1. V2RayNG安全吗？</h3>
+<p data-start="2200" data-end="2302" class="">V2RayNG提供了强大的加密机制，支持多种协议和传输方式，能够有效保护用户的上网隐私。然而，用户仍需选择可信的服务器，避免使用不可靠的代理服务商。使用V2RayNG时，选择安全、稳定的配置来源非常重要。</p>
+<h3 data-start="2304" data-end="2323" class="">2. 如何解决连接失败的问题？</h3>
+<p data-start="2325" data-end="2364" class="">连接失败是V2RayNG中常见的问题，可能由多种原因导致。以下是一些排查步骤：</p>
+<ul data-start="2365" data-end="2482">
+<li data-start="2365" data-end="2401" class="">
+<p data-start="2367" data-end="2401" class=""><strong data-start="2367" data-end="2385">检查服务器地址和端口是否正确</strong>：确认输入的服务器信息没有错误。</p>
+</li>
+<li data-start="2402" data-end="2435" class="">
+<p data-start="2404" data-end="2435" class=""><strong data-start="2404" data-end="2418">确认网络连接是否正常</strong>：确保您的设备已连接到稳定的网络。</p>
+</li>
+<li data-start="2436" data-end="2482" class="">
+<p data-start="2438" data-end="2482" class=""><strong data-start="2438" data-end="2454">尝试更换服务器或传输方式</strong>：如果一个服务器无法连接，尝试更换服务器或调整传输方式。</p>
+</li>
+</ul>
+<h3 data-start="2484" data-end="2505" class="">3. V2RayNG支持哪些协议？</h3>
+<p data-start="2507" data-end="2617" class="">V2RayNG支持多种协议，包括VMess、Shadowsocks、Trojan等。用户可以根据自己的需求和安全要求，选择适合的协议。不同的协议在防火墙绕过、加密方式和性能上有所不同，用户可以根据具体的使用场景做出选择。</p>
+<h3 data-start="2619" data-end="2635" class="">4. 如何导入配置文件？</h3>
+<p data-start="2637" data-end="2723" class="">V2RayNG提供了导入配置的功能，用户可以通过点击“导入配置”按钮，选择从本地文件或扫描二维码来导入配置文件。这样可以避免手动输入复杂的配置信息，确保服务器设置准确无误。</p>
+<h3 data-start="2725" data-end="2749" class="">5. V2RayNG的流量限制如何查看？</h3>
+<p data-start="2751" data-end="2822" class="">V2RayNG提供了流量监控功能，用户可以在应用设置中查看每个连接的流量使用情况。定期查看流量，可以帮助您避免超出流量限制，同时优化网络体验。</p>
+<h2 data-start="2824" data-end="2829" class="">结论</h2>
+<p data-start="2831" data-end="2981" class="">V2RayNG作为一款功能强大的网络代理工具，不仅支持多种协议和传输方式，还具有灵活的配置选项，适合各类用户使用。无论是为了突破网络审查、保护隐私，还是优化网络连接，V2RayNG都能提供高效的解决方案。通过本文的介绍，您应该能够熟练地安装、配置并使用V2RayNG，享受更加自由、安全的互联网体验。</p>
+<p data-start="2983" data-end="3086" class="">总之，V2RayNG不仅是一款优秀的科学上网工具，还具备强大的定制功能和卓越的网络性能，是广大Android用户的必备良品。希望本文的介绍能够帮助您更好地理解和使用V2RayNG，畅享自由、安全的网络环境。</p>                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-107296.htm">全面掌握Clash端口设置：配置、查找与优化的深度指南</a></p>
+                                        <p>下一个：<a href="/news/article-108034.htm">Quantumult最佳规则创建与管理指南</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-107297.htm" title="全面解析V2RayNG：安装、配置与使用技巧全攻略">全面解析V2RayNG：安装、配置与使用技巧全攻略</a></li>
+                        <li class="py-2"><a href="/news/article-105310.htm" title="全面解析iOS平台科学上网应用程序及使用技巧">全面解析iOS平台科学上网应用程序及使用技巧</a></li>
+                        <li class="py-2"><a href="/news/article-103830.htm" title="稳定科学上网：突破屏障，畅享自由互联网">稳定科学上网：突破屏障，畅享自由互联网</a></li>
+                        <li class="py-2"><a href="/news/article-104705.htm" title="如何在《Clash》中高效查看援军到达状态：全面解析与实用技巧">如何在《Clash》中高效查看援军到达状态：全面解析与实用技巧</a></li>
+                        <li class="py-2"><a href="/news/article-107296.htm" title="全面掌握Clash端口设置：配置、查找与优化的深度指南">全面掌握Clash端口设置：配置、查找与优化的深度指南</a></li>
+                        <li class="py-2"><a href="/news/article-108850.htm" title="如何在Padavan路由器上配置V2Ray：完整指南">如何在Padavan路由器上配置V2Ray：完整指南</a></li>
+                        <li class="py-2"><a href="/news/article-109689.htm" title="用智能预测守护网络自由：LSTM在V2Ray中的深度融合与实践指南">用智能预测守护网络自由：LSTM在V2Ray中的深度融合与实践指南</a></li>
+                        <li class="py-2"><a href="/news/article-103126.htm" title="深入探索 Clash 机场灵魂云的功能与配置指南">深入探索 Clash 机场灵魂云的功能与配置指南</a></li>
+                        <li class="py-2"><a href="/news/article-106133.htm" title="解锁网络自由的钥匙：全面解析V2Ray手机应用的安装、配置与使用技巧">解锁网络自由的钥匙：全面解析V2Ray手机应用的安装、配置与使用技巧</a></li>
+                        <li class="py-2"><a href="/news/article-101895.htm" title="新南威尔士大学阶级冲突现象探讨：挑战与应对之道">新南威尔士大学阶级冲突现象探讨：挑战与应对之道</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="footer py-5 text-center">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <p class="mb-0">
+                            <a href="#" class="p-3"><span class="icon-facebook"></span></a>
+                            <a href="#" class="p-3"><span class="icon-twitter"></span></a>
+                            <a href="#" class="p-3"><span class="icon-instagram"></span></a>
+                            <a href="#" class="p-3"><span class="icon-linkedin"></span></a>
+                            <a href="#" class="p-3"><span class="icon-pinterest"></span></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <p class="mb-0">
+                        SSR Clash订阅中文网 版权所有 Powered by WordPress
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery-3.3.1.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.countdown.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/bootstrap-datepicker.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.easing.1.3.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/aos.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.fancybox.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.sticky.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div> <!-- .site-wrap -->
+</body>
+
+</html>

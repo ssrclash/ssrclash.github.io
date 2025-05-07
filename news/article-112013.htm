@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://ssrclash.github.io/news/article-112013.htm" />
+    <meta charset="utf-8">
+    <title>Vmess速度解析：深入了解Vmess的性能表现与影响因素</title>
+        <meta name="description" content="随着互联网的全球化发展，网络访问已经成为我们日常生活和工作的一部分，尤其是当面临地理限制和审查时，科学上网工具显得尤为重要。在众多网络协议中，Vmess作为一种高效的传输协议，因其高安全性、灵活性以及" />
+        <link rel="icon" href="/assets/website/img/winxraygithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="SSR Clash订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ssrclash.github.io/news/article-112013.htm" />
+    <meta property="og:site_name" content="SSR Clash订阅中文网" />
+    <meta property="og:title" content="Vmess速度解析：深入了解Vmess的性能表现与影响因素" />
+    <meta property="og:image" content="https://ssrclash.github.io/uploads/20240803/32443e4bd3b20a198dc304fef7b6fd24.webp" />
+        <meta property="og:release_date" content="2025-05-05T09:01:38" />
+    <meta property="og:updated_time" content="2025-05-05T09:01:38" />
+        <meta property="og:description" content="随着互联网的全球化发展，网络访问已经成为我们日常生活和工作的一部分，尤其是当面临地理限制和审查时，科学上网工具显得尤为重要。在众多网络协议中，Vmess作为一种高效的传输协议，因其高安全性、灵活性以及" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Vmess速度解析：深入了解Vmess的性能表现与影响因素">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/fonts/winxraygithub/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/assets/website/fonts/winxraygithub/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/aos.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CE24DXP66L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CE24DXP66L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="site-wrap" id="home-section">
+                <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6 col-md-3 col-xl-4  d-block">
+                        <a href="/" class="text-black h2 mb-0">
+                                                SSR Clash                        </a>
+                    </div>
+                    <div class="col-12 col-md-9 col-xl-8 main-menu">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block ml-0 pl-0">
+                                                                <li><a href="/" class="nav-link">首页</a></li>
+                                                                <li><a href="/paid-subscribe/" class="nav-link">推荐机场</a></li>
+                                                                <li><a href="/news/" class="nav-link">新闻资讯</a></li>
+                                                                <li><a href="/client.htm" class="nav-link">客户端</a></li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 col-md-9 d-inline-block d-lg-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="site-blocks-cover list" style="overflow: hidden;">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+                        <img src="/assets/website/img/winxraygithub/undraw_investing_7u74.svg" alt="Image" class="img-fluid img-absolute">
+                        <div class="row" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-lg-6 mr-auto">
+                                <h1>Vmess速度解析：深入了解Vmess的性能表现与影响因素</h1>
+                                <p class="mb-5">
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-big my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                    
+<p data-start="33" data-end="163" class="">随着互联网的全球化发展，网络访问已经成为我们日常生活和工作的一部分，尤其是当面临地理限制和审查时，科学上网工具显得尤为重要。在众多网络协议中，<strong data-start="104" data-end="113">Vmess</strong>作为一种高效的传输协议，因其高安全性、灵活性以及较快的速度表现，成为了许多人选择的科学上网工具之一。</p>
+<p data-start="165" data-end="315" class="">然而，对于大多数用户而言，Vmess的速度是否真如宣传所说的那么快，成为了一个备受关注的问题。Vmess协议的速度受多种因素的影响，包括网络环境、服务器位置、加密方式、客户端设置等。本文将从多个角度深入分析Vmess协议的速度表现，以及如何优化设置来提高其效率，帮助你更好地理解Vmess的实际表现。</p>
+<h2 data-start="317" data-end="331" class="">一、Vmess协议概述</h2>
+<p data-start="333" data-end="459" class="">Vmess协议是一种专为绕过网络封锁而设计的高效传输协议，广泛应用于V2Ray项目中。它采用了高级的加密算法和混淆技术，能够有效避免流量被检测到，从而提升了匿名性和安全性。Vmess协议与传统的VPN技术相比，在灵活性、配置性和速度上都有着一定的优势。</p>
+<p data-start="461" data-end="474" class="">Vmess的主要特点包括：</p>
+<ul data-start="475" data-end="613">
+<li data-start="475" data-end="526" class="" style="">
+<p data-start="477" data-end="526" class=""><strong data-start="477" data-end="488">高效的加密方式</strong>：支持多种加密方式，包括AES-256-GCM等，能够确保数据传输的安全性。</p>
+</li>
+<li data-start="527" data-end="563" class="" style="">
+<p data-start="529" data-end="563" class=""><strong data-start="529" data-end="540">灵活的路由设置</strong>：用户可以自定义不同的规则，按需配置网络流量。</p>
+</li>
+<li data-start="564" data-end="613" class="" style="">
+<p data-start="566" data-end="613" class=""><strong data-start="566" data-end="575">高可扩展性</strong>：Vmess协议可以与V2Ray等工具结合使用，支持多种传输协议和负载均衡。</p>
+</li>
+</ul>
+<p data-start="615" data-end="676" class="">尽管Vmess的安全性和灵活性都很强，但许多用户对于其速度表现仍存在疑虑。接下来，我们将重点分析影响Vmess速度的因素。</p>
+<h2 data-start="678" data-end="697" class="">二、影响Vmess速度的关键因素</h2>
+<h3 data-start="699" data-end="710" class="">1. 网络环境</h3>
+<p data-start="712" data-end="763" class="">Vmess的速度表现与用户所处的网络环境密切相关。以下几个因素在很大程度上决定了Vmess的速度表现：</p>
+<ul data-start="765" data-end="1005">
+<li data-start="765" data-end="854" class="" style="">
+<p data-start="767" data-end="854" class=""><strong data-start="767" data-end="776">ISP速率</strong>：用户的互联网服务提供商（ISP）提供的网络带宽会直接影响Vmess的速度。如果ISP的带宽有限，那么无论Vmess协议本身的性能如何，都无法突破这一瓶颈。</p>
+</li>
+<li data-start="858" data-end="939" class="" style="">
+<p data-start="860" data-end="939" class=""><strong data-start="860" data-end="868">网络延迟</strong>：网络延迟是影响Vmess速度的一个重要因素。延迟越低，数据包的传输速度越快，反之则可能导致卡顿和掉线。可以通过ping命令来测试连接的延迟。</p>
+</li>
+<li data-start="941" data-end="1005" class="" style="">
+<p data-start="943" data-end="1005" class=""><strong data-start="943" data-end="953">网络拥堵情况</strong>：在高峰期，尤其是节假日或夜间时段，用户网络的拥堵情况较为严重，这时Vmess的速度可能会受到较大影响。</p>
+</li>
+</ul>
+<h3 data-start="1007" data-end="1019" class="">2. 服务器位置</h3>
+<p data-start="1021" data-end="1130" class="">Vmess的速度与服务器的位置密切相关。服务器与用户之间的距离越远，延迟通常越高。为了提升Vmess的速度，选择离自己物理位置较近的服务器非常重要。服务器负载也会影响连接速度，负载较低的服务器通常能够提供更快速的响应。</p>
+<p data-start="1132" data-end="1154" class="">在选择Vmess服务器时，建议考虑以下几点：</p>
+<ul data-start="1155" data-end="1282">
+<li data-start="1155" data-end="1217" class="" style="">
+<p data-start="1157" data-end="1217" class=""><strong data-start="1157" data-end="1173">选择距离自己较近的服务器</strong>：如果你位于中国大陆，那么选择位于香港或日本的服务器通常能够获得更低的延迟和更高的速度。</p>
+</li>
+<li data-start="1218" data-end="1282" class="" style="">
+<p data-start="1220" data-end="1282" class=""><strong data-start="1220" data-end="1232">避免高负载服务器</strong>：高负载的服务器会导致资源分配不均，影响连接速度。可以使用测速工具或选择负载均衡的服务器来提高速度。</p>
+</li>
+</ul>
+<h3 data-start="1284" data-end="1295" class="">3. 加密方式</h3>
+<p data-start="1297" data-end="1414" class="">Vmess协议支持多种加密方式，每种加密方式的强度和性能有所不同。加密方式越复杂，所需的计算资源越多，可能导致速度下降。Vmess默认采用较为复杂的加密算法（如AES-256-GCM），在提供高安全性的同时，也对系统资源有较高的要求。</p>
+<p data-start="1416" data-end="1522" class="">为了平衡速度与安全性，用户可以根据实际需要选择适合的加密方式。通常，较轻的加密方式（如ChaCha20）可以提供更快的速度，而较强的加密方式（如AES-256）则能够提供更高的安全性，但可能对性能产生一定的影响。</p>
+<h3 data-start="1524" data-end="1536" class="">4. 客户端设置</h3>
+<p data-start="1538" data-end="1573" class="">Vmess的客户端设置直接影响其速度。以下是一些优化客户端设置的建议：</p>
+<ul data-start="1574" data-end="1802">
+<li data-start="1574" data-end="1654" class="" style="">
+<p data-start="1576" data-end="1654" class=""><strong data-start="1576" data-end="1587">保持客户端更新</strong>：Vmess的客户端（如V2Ray）不断进行优化，新的版本通常会包含性能提升和bug修复，因此定期更新客户端能够确保你获得最佳的性能。</p>
+</li>
+<li data-start="1655" data-end="1731" class="" style="">
+<p data-start="1657" data-end="1731" class=""><strong data-start="1657" data-end="1667">检查配置文件</strong>：配置文件中的一些参数，如MTU（最大传输单元）、DNS设置等，可能会对速度产生影响。确保配置文件的设置无误，能够提高连接效率。</p>
+</li>
+<li data-start="1732" data-end="1802" class="" style="">
+<p data-start="1734" data-end="1802" class=""><strong data-start="1734" data-end="1747">选择适合的传输协议</strong>：Vmess支持多种传输协议（如WebSocket、mKCP等），选择合适的传输协议可以提高连接速度和稳定性。</p>
+</li>
+</ul>
+<h2 data-start="1804" data-end="1819" class="">三、Vmess的速度表现</h2>
+<h3 data-start="1821" data-end="1832" class="">1. 实际测速</h3>
+<p data-start="1834" data-end="1914" class="">为了更直观地了解Vmess的速度表现，我们可以通过Speedtest等测速工具进行测速。在多个地区使用Vmess协议进行连接后，我们可以得到以下几个重要的数据：</p>
+<ul data-start="1916" data-end="2161">
+<li data-start="1916" data-end="2008" class="" style="">
+<p data-start="1918" data-end="2008" class=""><strong data-start="1918" data-end="1926">下载速度</strong>：Vmess的下载速度通常能够与普通的互联网连接相媲美，甚至在某些情况下，速度会更快。特别是在选择了合适的服务器并且优化了配置后，Vmess的下载速度表现非常出色。</p>
+</li>
+<li data-start="2010" data-end="2069" class="" style="">
+<p data-start="2012" data-end="2069" class=""><strong data-start="2012" data-end="2020">上传速度</strong>：Vmess的上传速度通常也比较稳定，适合需要频繁上传数据的用户，比如进行云存储或数据迁移的用户。</p>
+</li>
+<li data-start="2071" data-end="2161" class="" style="">
+<p data-start="2073" data-end="2161" class=""><strong data-start="2073" data-end="2083">延迟和丢包率</strong>：Vmess协议的延迟通常较低，丢包率也相对较小。在合理的配置和优化下，Vmess的延迟和丢包率可以保持在一个非常低的水平，这比传统的VPN协议要优越得多。</p>
+</li>
+</ul>
+<h3 data-start="2163" data-end="2174" class="">2. 同比实验</h3>
+<p data-start="2176" data-end="2292" class="">在多个地区测试Vmess协议的速度时，可以通过与传统VPN协议进行对比，得到更明确的结果。例如，在访问YouTube时，Vmess协议的访问速度通常比传统VPN更快，尤其在高峰时段，Vmess能够更好地控制流量，保证稳定的连接速度。</p>
+<p data-start="2294" data-end="2392" class="">在不同的时段进行测速时，Vmess的表现也相对稳定，尤其在避免网络拥堵的时段，Vmess能够发挥出最佳性能。而在网络拥堵较严重的时段，Vmess的速度仍然能够保持一定的优势，但可能会受到一定影响。</p>
+<h2 data-start="2394" data-end="2411" class="">四、如何提升Vmess的速度</h2>
+<h3 data-start="2413" data-end="2427" class="">1. 定期更换服务器</h3>
+<p data-start="2429" data-end="2529" class="">Vmess的服务器性能直接影响其速度表现。定期更换服务器，选择不同地理位置的节点，能够有效提升速度。对于需要高流量支持的时段，可以采用负载均衡的方案，确保流量不会集中在单一服务器上，从而提升整体速度。</p>
+<h3 data-start="2531" data-end="2544" class="">2. 优化网络设置</h3>
+<p data-start="2546" data-end="2641" class="">为了提高Vmess的速度，用户可以调整一些网络设置。例如，使用较小的MTU值进行调整，可以避免因数据包过大而导致的延迟。此外，选择合适的DNS服务器，也能够减少域名解析的延迟，提升连接速度。</p>
+<h3 data-start="2643" data-end="2660" class="">3. 测试并优化客户端配置</h3>
+<p data-start="2662" data-end="2767" class="">在客户端设置中，用户可以选择不同的加密方式、传输协议和网络参数。根据实际需求，调整配置文件中的设置，能够有效提升Vmess的性能。例如，使用WebSocket等传输协议，可能会比TCP协议更稳定，从而提升速度。</p>
+<h2 data-start="2769" data-end="2785" class="">五、Vmess常见疑问解答</h2>
+<h3 data-start="2787" data-end="2801" class="">Vmess真的快吗？</h3>
+<p data-start="2803" data-end="2904" class="">Vmess协议在正确配置的情况下，速度表现相当优秀。尤其是与传统VPN技术相比，Vmess在延迟、丢包率和稳定性方面都有着明显的优势。然而，实际表现还受到网络环境、服务器选择和加密方式等多重因素的影响。</p>
+<h3 data-start="2906" data-end="2923" class="">如何提升Vmess的速度？</h3>
+<p data-start="2925" data-end="2988" class="">提升Vmess速度的关键是选择合适的服务器、优化客户端配置并定期更新软件。此外，合理调整加密方式和传输协议，也能有效提升性能。</p>
+<h3 data-start="2990" data-end="3005" class="">Vmess有哪些优势？</h3>
+<p data-start="3007" data-end="3096" class="">Vmess具备高安全性、灵活配置、低延迟等优点，能够为用户提供更快、更稳定的网络体验。它适合用于跨区域访问以及绕过网络限制，尤其在流量较大的用户群体中，Vmess的优势尤为突出。</p>
+<h2 data-start="3098" data-end="3105" class="">六、总结</h2>
+<p data-start="3107" data-end="3263" class="">总体来说，Vmess协议在合适的条件下，能够提供非常出色的速度表现。通过合理的配置、服务器选择和优化网络设置，Vmess不仅能够与传统VPN媲美，甚至在某些情况下提供更快的速度。随着技术的进步和客户端的持续优化，Vmess的性能有望进一步提升。对于需要科学上网的用户而言，Vmess无疑是一个值得考虑的优选协议。</p>
+<hr data-start="3265" data-end="3268" class="">
+<h3 data-start="3270" data-end="3279" class="">精彩点评：</h3>
+<p data-start="3281" data-end="3463" class="">这篇文章在深入剖析Vmess协议速度表现的同时，结合了实际应用场景和具体操作建议，帮助用户在理论与实践之间找到平衡。文章条理清晰、重点突出，深入浅出地解释了Vmess协议的速度瓶颈及优化方法，尤其是在服务器选择、加密方式及客户端设置上的建议，极具实用价值。此外，文章结尾的总结部分，不仅总结了Vmess的优势，还对未来的技术发展进行了展望，展现出深厚的技术洞察力。</p>                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-112009.htm">深度解析：Clash 安卓常见问题及解决方案</a></p>
+                                        <p>下一个：<a href="/news/article-112369.htm">如何在潘多拉设备上安装Clash：详细教程与配置指南</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-108854.htm" title="破解困境：V2Ray在中国移动宽带下连接不稳定问题全解析与应对策略">破解困境：V2Ray在中国移动宽带下连接不稳定问题全解析与应对策略</a></li>
+                        <li class="py-2"><a href="/news/article-103830.htm" title="稳定科学上网：突破屏障，畅享自由互联网">稳定科学上网：突破屏障，畅享自由互联网</a></li>
+                        <li class="py-2"><a href="/news/article-106134.htm" title="全面了解Surfboard更新：内容、步骤与常见问题解答">全面了解Surfboard更新：内容、步骤与常见问题解答</a></li>
+                        <li class="py-2"><a href="/news/article-103126.htm" title="深入探索 Clash 机场灵魂云的功能与配置指南">深入探索 Clash 机场灵魂云的功能与配置指南</a></li>
+                        <li class="py-2"><a href="/news/article-108850.htm" title="如何在Padavan路由器上配置V2Ray：完整指南">如何在Padavan路由器上配置V2Ray：完整指南</a></li>
+                        <li class="py-2"><a href="/news/article-112713.htm" title="2019年科学上网完全指南：方法、工具与实用技巧">2019年科学上网完全指南：方法、工具与实用技巧</a></li>
+                        <li class="py-2"><a href="/news/article-101895.htm" title="新南威尔士大学阶级冲突现象探讨：挑战与应对之道">新南威尔士大学阶级冲突现象探讨：挑战与应对之道</a></li>
+                        <li class="py-2"><a href="/news/article-102116.htm" title="华硕科学上网插件详细指南：如何高效实现科学上网">华硕科学上网插件详细指南：如何高效实现科学上网</a></li>
+                        <li class="py-2"><a href="/news/article-104705.htm" title="如何在《Clash》中高效查看援军到达状态：全面解析与实用技巧">如何在《Clash》中高效查看援军到达状态：全面解析与实用技巧</a></li>
+                        <li class="py-2"><a href="/news/article-107297.htm" title="全面解析V2RayNG：安装、配置与使用技巧全攻略">全面解析V2RayNG：安装、配置与使用技巧全攻略</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="footer py-5 text-center">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <p class="mb-0">
+                            <a href="#" class="p-3"><span class="icon-facebook"></span></a>
+                            <a href="#" class="p-3"><span class="icon-twitter"></span></a>
+                            <a href="#" class="p-3"><span class="icon-instagram"></span></a>
+                            <a href="#" class="p-3"><span class="icon-linkedin"></span></a>
+                            <a href="#" class="p-3"><span class="icon-pinterest"></span></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <p class="mb-0">
+                        SSR Clash订阅中文网 版权所有 Powered by WordPress
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery-3.3.1.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.countdown.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/bootstrap-datepicker.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.easing.1.3.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/aos.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.fancybox.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.sticky.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div> <!-- .site-wrap -->
+</body>
+
+</html>

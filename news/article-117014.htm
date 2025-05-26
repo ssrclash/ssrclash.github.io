@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://ssrclash.github.io/news/article-117014.htm" />
+    <meta charset="utf-8">
+    <title>iOS端的极致净网体验：详解Quantumult广告屏蔽术</title>
+        <meta name="description" content="在智能设备高度普及的今天，手机App作为人们日常获取信息与娱乐的主要工具，也在不经意间将我们推入广告包围的深渊。从开屏广告、悬浮广告到视频强插广告，越来越多的用户开始追求更为纯净、顺畅的网络使用环境。" />
+        <link rel="icon" href="/assets/website/img/winxraygithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="SSR Clash订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ssrclash.github.io/news/article-117014.htm" />
+    <meta property="og:site_name" content="SSR Clash订阅中文网" />
+    <meta property="og:title" content="iOS端的极致净网体验：详解Quantumult广告屏蔽术" />
+    <meta property="og:image" content="https://ssrclash.github.io/uploads/20240803/3a318ebabb122794e9890a6505b78634.webp" />
+        <meta property="og:release_date" content="2025-05-21T08:00:03" />
+    <meta property="og:updated_time" content="2025-05-21T08:00:03" />
+        <meta property="og:description" content="在智能设备高度普及的今天，手机App作为人们日常获取信息与娱乐的主要工具，也在不经意间将我们推入广告包围的深渊。从开屏广告、悬浮广告到视频强插广告，越来越多的用户开始追求更为纯净、顺畅的网络使用环境。" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="iOS端的极致净网体验：详解Quantumult广告屏蔽术">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/fonts/winxraygithub/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/assets/website/fonts/winxraygithub/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/aos.css">
+    <link rel="stylesheet" href="/assets/website/css/winxraygithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CE24DXP66L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CE24DXP66L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="site-wrap" id="home-section">
+                <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6 col-md-3 col-xl-4  d-block">
+                        <a href="/" class="text-black h2 mb-0">
+                                                SSR Clash                        </a>
+                    </div>
+                    <div class="col-12 col-md-9 col-xl-8 main-menu">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block ml-0 pl-0">
+                                                                <li><a href="/" class="nav-link">首页</a></li>
+                                                                <li><a href="/paid-subscribe/" class="nav-link">推荐机场</a></li>
+                                                                <li><a href="/news/" class="nav-link">新闻资讯</a></li>
+                                                                <li><a href="/client.htm" class="nav-link">客户端</a></li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 col-md-9 d-inline-block d-lg-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="site-blocks-cover list" style="overflow: hidden;">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+                        <img src="/assets/website/img/winxraygithub/undraw_investing_7u74.svg" alt="Image" class="img-fluid img-absolute">
+                        <div class="row" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-lg-6 mr-auto">
+                                <h1>iOS端的极致净网体验：详解Quantumult广告屏蔽术</h1>
+                                <p class="mb-5">
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-big my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                    
+<p data-start="33" data-end="196">在智能设备高度普及的今天，手机App作为人们日常获取信息与娱乐的主要工具，也在不经意间将我们推入广告包围的深渊。从开屏广告、悬浮广告到视频强插广告，越来越多的用户开始追求更为纯净、顺畅的网络使用环境。在这种背景下，一款名为 <strong data-start="145" data-end="159">Quantumult</strong> 的iOS应用以其强大的网络管理与广告屏蔽功能，迅速走进了高阶用户的视野。</p>
+<p data-start="198" data-end="327">本文将带您深入了解Quantumult的功能机制，并围绕如何有效屏蔽广告进行全面讲解。从安装配置到规则订阅，从流量分析到节点选择，为您搭建起一套系统、稳定、实用的净网方案，让iPhone也能拥有媲美PC端AdGuard、uBlock Origin的屏蔽能力。</p>
+<hr data-start="329" data-end="332">
+<h2 data-start="334" data-end="355">一、为什么选择Quantumult？</h2>
+<p data-start="357" data-end="420">广告屏蔽工具层出不穷，iOS系统由于其封闭特性，相关应用更是受到诸多限制。那么为何Quantumult仍然成为很多用户的首选？</p>
+<h3 data-start="422" data-end="441">1.1 深度系统级接管网络请求</h3>
+<p data-start="443" data-end="562">Quantumult并不是传统意义上的浏览器扩展，它通过<strong data-start="471" data-end="483">配置系统网络代理</strong>的方式，全局接管设备发出的HTTP/HTTPS请求。这意味着，它可以屏蔽的不仅是网页上的广告，还有App内部调用的广告SDK，是真正的<strong data-start="550" data-end="561">系统级净网工具</strong>。</p>
+<h3 data-start="564" data-end="581">1.2 高自由度的规则管理</h3>
+<p data-start="583" data-end="651">它支持订阅各种规则列表，如广告过滤规则、分流规则、IP封锁列表等，同时用户还可以自定义规则，匹配粒度可达域名级甚至路径级，既精准又灵活。</p>
+<h3 data-start="653" data-end="670">1.3 与代理服务完美融合</h3>
+<p data-start="672" data-end="753">Quantumult本身就具备出色的代理能力，用户可以将广告屏蔽与科学上网、加速节点结合，实现一站式网络优化，既能净网，又能提速，属于实用派与效率派的最佳平衡点。</p>
+<hr data-start="755" data-end="758">
+<h2 data-start="760" data-end="783">二、Quantumult 的核心功能概览</h2>
+<p data-start="785" data-end="825">想要充分发挥Quantumult的广告屏蔽能力，首先我们要了解它的主要功能模块：</p>
+<ul data-start="827" data-end="1090">
+<li data-start="827" data-end="860">
+<p data-start="829" data-end="860"><strong data-start="829" data-end="846">广告过滤器（Filter）</strong>：通过规则列表拦截广告请求；</p>
+</li>
+<li data-start="861" data-end="908">
+<p data-start="863" data-end="908"><strong data-start="863" data-end="878">网络代理（Proxy）</strong>：允许接入各类节点，如Shadowsocks、Vmess等；</p>
+</li>
+<li data-start="909" data-end="947">
+<p data-start="911" data-end="947"><strong data-start="911" data-end="928">策略组管理（Policy）</strong>：定义不同的请求应该走哪个节点或直连；</p>
+</li>
+<li data-start="948" data-end="994">
+<p data-start="950" data-end="994"><strong data-start="950" data-end="975">流量监控（Traffic Monitor）</strong>：实时显示各个请求的来源、大小与去向；</p>
+</li>
+<li data-start="995" data-end="1043">
+<p data-start="997" data-end="1043"><strong data-start="997" data-end="1026">规则列表订阅（Rule Subscription）</strong>：定期自动更新规则，维持过滤效果；</p>
+</li>
+<li data-start="1044" data-end="1090">
+<p data-start="1046" data-end="1090"><strong data-start="1046" data-end="1062">脚本支持（Script）</strong>：可配合JS脚本实现高级拦截行为，如重定向、模拟响应等。</p>
+</li>
+</ul>
+<p data-start="1092" data-end="1131">这些功能结合在一起，构成了Quantumult远超一般广告屏蔽工具的强大潜力。</p>
+<hr data-start="1133" data-end="1136">
+<h2 data-start="1138" data-end="1160">三、Quantumult安装与初始配置</h2>
+<h3 data-start="1162" data-end="1175">3.1 下载与安装</h3>
+<ol data-start="1177" data-end="1272">
+<li data-start="1177" data-end="1197">
+<p data-start="1180" data-end="1197">打开 <strong data-start="1183" data-end="1196">App Store</strong>；</p>
+</li>
+<li data-start="1198" data-end="1219">
+<p data-start="1201" data-end="1219">搜索 <strong data-start="1204" data-end="1218">Quantumult</strong>；</p>
+</li>
+<li data-start="1220" data-end="1252">
+<p data-start="1223" data-end="1252">点击“获取”下载安装（此应用为付费软件，需支付购买费用）；</p>
+</li>
+<li data-start="1253" data-end="1272">
+<p data-start="1256" data-end="1272">安装完成后，点击图标进入主界面。</p>
+</li>
+</ol>
+<h3 data-start="1274" data-end="1288">3.2 添加节点配置</h3>
+<p data-start="1290" data-end="1335">虽然本篇聚焦广告屏蔽，但节点配置是Quantumult运行的基础，也是实现净网功能的依托。</p>
+<ol data-start="1337" data-end="1441">
+<li data-start="1337" data-end="1373">
+<p data-start="1340" data-end="1373">准备一份你自己的订阅链接（Shadowsocks、Vmess等）；</p>
+</li>
+<li data-start="1374" data-end="1402">
+<p data-start="1377" data-end="1402">打开Quantumult → 设置 → 节点管理；</p>
+</li>
+<li data-start="1403" data-end="1422">
+<p data-start="1406" data-end="1422">点击右上角“+”，粘贴订阅链接；</p>
+</li>
+<li data-start="1423" data-end="1441">
+<p data-start="1426" data-end="1441">刷新列表，加载完成后测试连接。</p>
+</li>
+</ol>
+<hr data-start="1443" data-end="1446">
+<h2 data-start="1448" data-end="1476">四、如何使用Quantumult屏蔽广告：实战指南</h2>
+<p data-start="1478" data-end="1515">接下来是本文的核心部分：如何具体操作Quantumult来屏蔽烦人的广告。</p>
+<h3 data-start="1517" data-end="1535">4.1 导入广告屏蔽规则列表</h3>
+<p data-start="1537" data-end="1588">Quantumult支持多种规则格式，其中最常用的是“filter”类的广告屏蔽规则。以下是操作步骤：</p>
+<ol data-start="1590" data-end="1737">
+<li data-start="1590" data-end="1607">
+<p data-start="1593" data-end="1607">打开 Quantumult；</p>
+</li>
+<li data-start="1608" data-end="1644">
+<p data-start="1611" data-end="1644">点击“设置” → “Filter” → “订阅” → 点击“+”；</p>
+</li>
+<li data-start="1645" data-end="1695">
+<p data-start="1648" data-end="1695">粘贴广告屏蔽规则链接（如：<a data-start="1661" data-end="1695" rel="noopener" target="_new" class="cursor-pointer">https://example.com/adblock.list）；</a></p>
+</li>
+<li data-start="1696" data-end="1714">
+<p data-start="1699" data-end="1714">命名为“广告规则”，点击保存；</p>
+</li>
+<li data-start="1715" data-end="1737">
+<p data-start="1718" data-end="1737">返回主界面后，确保Filter已启用。</p>
+</li>
+</ol>
+<h4 data-start="1739" data-end="1752">推荐广告规则源：</h4>
+<ul data-start="1754" data-end="1921">
+<li data-start="1754" data-end="1805">
+<p data-start="1756" data-end="1805"><a data-start="1756" data-end="1805" rel="noopener" target="_new" class="" href="https://github.com/ACL4SSR/ACL4SSR">ACL4SSR广告列表</a></p>
+</li>
+<li data-start="1806" data-end="1855">
+<p data-start="1808" data-end="1855"><a data-start="1808" data-end="1855" class="" rel="noopener" target="_new" href="https://github.com/Cats-Team/AdRules">AdRules</a></p>
+</li>
+<li data-start="1856" data-end="1921">
+<p data-start="1858" data-end="1921"><a data-start="1858" data-end="1921" rel="noopener" target="_new" class="" href="https://github.com/Loyalsoldier/clash-rules">Loyalsoldier规则合集</a></p>
+</li>
+</ul>
+<h3 data-start="1923" data-end="1944">4.2 启用屏蔽规则并设置策略路径</h3>
+<p data-start="1946" data-end="1972">Quantumult允许将规则对应到策略组。你可以：</p>
+<ol data-start="1974" data-end="2081">
+<li data-start="1974" data-end="1995">
+<p data-start="1977" data-end="1995">打开设置 → Policy（策略）；</p>
+</li>
+<li data-start="1996" data-end="2027">
+<p data-start="1999" data-end="2027">新建一个策略组名为“广告过滤”，设置为“REJECT”；</p>
+</li>
+<li data-start="2028" data-end="2050">
+<p data-start="2031" data-end="2050">将广告规则的处理策略改为“广告过滤”；</p>
+</li>
+<li data-start="2051" data-end="2081">
+<p data-start="2054" data-end="2081">所有命中广告规则的请求将被直接拒绝，不再发送到服务器。</p>
+</li>
+</ol>
+<p data-start="2083" data-end="2157">这样设置后，无论是 Safari 浏览器、YouTube、Facebook、Instagram 还是其他App中加载的广告，只要命中规则就会被拦截。</p>
+<h3 data-start="2159" data-end="2176">4.3 实时监控与手动添加</h3>
+<p data-start="2178" data-end="2236">进入“流量监控”页面，你可以看到每一个连接的来源与路径，若发现仍有广告漏网，可长按该条记录，手动将其添加至广告规则。</p>
+<p data-start="2238" data-end="2276">这是Quantumult最强悍的特性之一 —— <strong data-start="2262" data-end="2275">边用边学，持续优化</strong>。</p>
+<hr data-start="2278" data-end="2281">
+<h2 data-start="2283" data-end="2303">五、进阶技巧：规则联动与多策略融合</h2>
+<p data-start="2305" data-end="2360">对于进阶用户，Quantumult还允许通过<strong data-start="2327" data-end="2335">分组策略</strong>和<strong data-start="2336" data-end="2344">条件规则</strong>进一步提升广告屏蔽的效率与精度。</p>
+<h3 data-start="2362" data-end="2375">5.1 多规则叠加</h3>
+<p data-start="2377" data-end="2395">你可以同时订阅多个不同类型的规则源：</p>
+<ul data-start="2397" data-end="2440">
+<li data-start="2397" data-end="2409">
+<p data-start="2399" data-end="2409">国内分流规则（直连）</p>
+</li>
+<li data-start="2410" data-end="2423">
+<p data-start="2412" data-end="2423">国外视频规则（走代理）</p>
+</li>
+<li data-start="2424" data-end="2440">
+<p data-start="2426" data-end="2440">广告过滤规则（REJECT）</p>
+</li>
+</ul>
+<p data-start="2442" data-end="2473">通过策略组统一调度，实现“一条规则匹配，自动路由”的高级行为。</p>
+<h3 data-start="2475" data-end="2499">5.2 使用脚本过滤广告（Script）</h3>
+<p data-start="2501" data-end="2543">Quantumult还支持以JavaScript方式实现某些广告的拦截或伪装。例如：</p>
+<ul data-start="2545" data-end="2600">
+<li data-start="2545" data-end="2563">
+<p data-start="2547" data-end="2563">对微信视频号广告请求进行重定向；</p>
+</li>
+<li data-start="2564" data-end="2583">
+<p data-start="2566" data-end="2583">模拟返回空白广告素材给某些App；</p>
+</li>
+<li data-start="2584" data-end="2600">
+<p data-start="2586" data-end="2600">拦截App强制升级页面跳转。</p>
+</li>
+</ul>
+<p data-start="2602" data-end="2640">脚本通常配合URL-REGEX或HOST规则触发，功能强大但需一定编程基础。</p>
+<hr data-start="2642" data-end="2645">
+<h2 data-start="2647" data-end="2661">六、使用建议与注意事项</h2>
+<ul data-start="2663" data-end="2826">
+<li data-start="2663" data-end="2696">
+<p data-start="2665" data-end="2696"><strong data-start="2665" data-end="2675">规则不宜过多</strong>：过多的规则会增加解析时间，建议定期整理；</p>
+</li>
+<li data-start="2697" data-end="2729">
+<p data-start="2699" data-end="2729"><strong data-start="2699" data-end="2707">谨防误杀</strong>：有些广告规则可能误拦正常内容，需灵活调整；</p>
+</li>
+<li data-start="2730" data-end="2756">
+<p data-start="2732" data-end="2756"><strong data-start="2732" data-end="2740">定期更新</strong>：保持规则列表和软件版本为最新；</p>
+</li>
+<li data-start="2757" data-end="2795">
+<p data-start="2759" data-end="2795"><strong data-start="2759" data-end="2769">组合使用工具</strong>：可配合系统DNS设置、Safari扩展等提升体验；</p>
+</li>
+<li data-start="2796" data-end="2826">
+<p data-start="2798" data-end="2826"><strong data-start="2798" data-end="2808">合法合规使用</strong>：切勿用于侵害版权或违反法律的行为。</p>
+</li>
+</ul>
+<hr data-start="2828" data-end="2831">
+<h2 data-start="2833" data-end="2844">七、常见问题解答</h2>
+<p data-start="2846" data-end="2935"><strong data-start="2846" data-end="2874">Q1：Quantumult能否完全屏蔽所有广告？</strong><br data-start="2874" data-end="2877">
+A：不能。部分广告采用加密、混淆、动态请求等技术，仍可能绕过屏蔽。但结合精准规则与脚本处理，足以屏蔽大部分常见广告。</p>
+<p data-start="2937" data-end="3021"><strong data-start="2937" data-end="2968">Q2：Quantumult能否拦截App内的开屏广告？</strong><br data-start="2968" data-end="2971">
+A：部分App可以，尤其是通过固定域名加载广告的应用。但有些App已将广告资源内嵌入包体，无法屏蔽。</p>
+<p data-start="3023" data-end="3098"><strong data-start="3023" data-end="3050">Q3：使用Quantumult是否会影响网速？</strong><br data-start="3050" data-end="3053">
+A：理论上不会，若配置得当，反而能提升访问速度。但若策略过多或规则过杂，可能产生一定延迟。</p>
+<p data-start="3100" data-end="3212"><strong data-start="3100" data-end="3129">Q4：Quantumult是否支持Android？</strong><br data-start="3129" data-end="3132">
+A：不支持。Quantumult是iOS平台独占应用，Android用户可尝试Surfboard、Hiddify、Clash for Android等替代工具。</p>
+<hr data-start="3214" data-end="3217">
+<h2 data-start="3219" data-end="3244">八、结语：以净化为起点，走向网络掌控力的巅峰</h2>
+<p data-start="3246" data-end="3363">广告屏蔽只是Quantumult能力的一部分，它真正强大的，是对整个网络请求流程的全面掌控。通过规则的精细管理、策略的灵活组合与脚本的强大扩展，Quantumult将“自定义网络体验”这个曾属于极客的话题，带到了普通用户的操作视野中。</p>
+<p data-start="3365" data-end="3441">在这个广告汹涌、信息泛滥的世界里，保持清醒的认知、干净的界面、快速的访问，正是对数字生活最基本的尊重。Quantumult，让我们拥有了这份“掌控感”。</p>
+<hr data-start="3443" data-end="3446">
+<h2 data-start="3448" data-end="3457">语言精彩点评</h2>
+<p data-start="3459" data-end="3572">本文用“净网”作为叙述主轴，巧妙串联起Quantumult的多个功能模块，结构层层递进，讲解逻辑清晰、技术细节详实。文中不乏贴合用户使用场景的实例，如流量监控的动态规则添加、脚本拦截的高级玩法，使得枯燥的技术介绍变得鲜活生动。</p>
+<p data-start="3574" data-end="3694" data-is-last-node="" data-is-only-node="">语言上，既有专业术语的精准使用，也不乏富有节奏感的表达，如“边用边学”、“拦截即反馈”等，使读者在阅读中能感受到作者对工具背后的技术美学有着深刻体悟。整体来看，这是一篇兼具实用性与阅读美感的高质量博客类技术文章，值得广告屏蔽爱好者反复研读。</p>                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-116703.htm">L2TP vs V2Ray：谁才是网络世界里的隐形守护者？</a></p>
+                                        <p>下一个：<a href="/news/article-117335.htm">Quantumult根证书安装全攻略：保障安全上网的关键步骤详解</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-103126.htm" title="深入探索 Clash 机场灵魂云的功能与配置指南">深入探索 Clash 机场灵魂云的功能与配置指南</a></li>
+                        <li class="py-2"><a href="/news/article-108035.htm" title="科学上网手抄报的内容与制作指南">科学上网手抄报的内容与制作指南</a></li>
+                        <li class="py-2"><a href="/news/article-112013.htm" title="Vmess速度解析：深入了解Vmess的性能表现与影响因素">Vmess速度解析：深入了解Vmess的性能表现与影响因素</a></li>
+                        <li class="py-2"><a href="/news/article-115765.htm" title="子App全面解析：如何配置与使用SSR与V2Ray实现高效科学上网">子App全面解析：如何配置与使用SSR与V2Ray实现高效科学上网</a></li>
+                        <li class="py-2"><a href="/news/article-108034.htm" title="Quantumult最佳规则创建与管理指南">Quantumult最佳规则创建与管理指南</a></li>
+                        <li class="py-2"><a href="/news/article-117014.htm" title="iOS端的极致净网体验：详解Quantumult广告屏蔽术">iOS端的极致净网体验：详解Quantumult广告屏蔽术</a></li>
+                        <li class="py-2"><a href="/news/article-113940.htm" title="Shadowrocket实用指南：玩转iOS上的Hosts文件自定义解析">Shadowrocket实用指南：玩转iOS上的Hosts文件自定义解析</a></li>
+                        <li class="py-2"><a href="/news/article-102116.htm" title="华硕科学上网插件详细指南：如何高效实现科学上网">华硕科学上网插件详细指南：如何高效实现科学上网</a></li>
+                        <li class="py-2"><a href="/news/article-106133.htm" title="解锁网络自由的钥匙：全面解析V2Ray手机应用的安装、配置与使用技巧">解锁网络自由的钥匙：全面解析V2Ray手机应用的安装、配置与使用技巧</a></li>
+                        <li class="py-2"><a href="/news/article-105311.htm" title="完整指南：V2Ray域名更换步骤及常见问题解答">完整指南：V2Ray域名更换步骤及常见问题解答</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="footer py-5 text-center">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <p class="mb-0">
+                            <a href="#" class="p-3"><span class="icon-facebook"></span></a>
+                            <a href="#" class="p-3"><span class="icon-twitter"></span></a>
+                            <a href="#" class="p-3"><span class="icon-instagram"></span></a>
+                            <a href="#" class="p-3"><span class="icon-linkedin"></span></a>
+                            <a href="#" class="p-3"><span class="icon-pinterest"></span></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <p class="mb-0">
+                        SSR Clash订阅中文网 版权所有 Powered by WordPress
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery-3.3.1.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery-ui.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.countdown.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/bootstrap-datepicker.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.easing.1.3.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/aos.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.fancybox.min.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/jquery.sticky.js"></script>
+        <script src="/assets/website/js/frontend/winxraygithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div> <!-- .site-wrap -->
+</body>
+
+</html>
